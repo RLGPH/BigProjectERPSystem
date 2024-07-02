@@ -14,8 +14,14 @@ public partial class MainView : UserControl
     }
     private void CompanyButton_Click(object sender, RoutedEventArgs e)
     {
-        Tabs.TabIndex = 1;
+        Tabs.SelectedIndex = 1;
+        /*
         List<Company> companies = new List<Company>();
         companies = instance.GetCompanyList();
+        */
+    }
+    private void BacktoMenuButton_Click(object sender, RoutedEventArgs e)
+    {
+        Tabs.SelectedIndex = 0;
     }
 }

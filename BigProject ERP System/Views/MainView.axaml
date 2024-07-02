@@ -12,40 +12,7 @@
     <vm:MainViewModel />
   </Design.DataContext>
 	<Grid>
-		<TabControl>
-			<TabItem IsVisible="False" x:Name="Tabs">
-				<Grid>
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="30*"/>
-						<ColumnDefinition Width="250*"/>
-						<ColumnDefinition Width="30*"/>
-					</Grid.ColumnDefinitions>
-					<Grid.RowDefinitions>
-						<RowDefinition Height="20*"/>
-						<RowDefinition Height="60*"/>
-						<RowDefinition Height="60*"/>
-						<RowDefinition Height="60*"/>
-						<RowDefinition Height="60*"/>
-						<RowDefinition Height="60*"/>
-						<RowDefinition Height="20*"/>
-					</Grid.RowDefinitions>
-					<StackPanel Grid.Row="1" Grid.Column="1">
-						<Border Margin="5"
-								  CornerRadius="10"
-								  Background="LightBlue">
-							<TextBlock Margin="5"
-							   FontSize="24"
-							   HorizontalAlignment="Center" Foreground="Black"
-							   Text="Main menu">
-							</TextBlock>
-						</Border>
-					</StackPanel>
-					<StackPanel Grid.Row="2" Grid.Column="1">
-						<Button>Company</Button>
-					</StackPanel>
-				</Grid>
-			</TabItem>
-			
+		<TabControl x:Name="Tabs">
 			<TabItem IsVisible="False">
 				<Grid>
 					<Grid.ColumnDefinitions>
@@ -74,7 +41,40 @@
 						</Border>
 					</StackPanel>
 					<StackPanel Grid.Row="2" Grid.Column="1">
-						<Button>Back to main</Button>
+						<Button Click="CompanyButton_Click">Company</Button>
+					</StackPanel>
+				</Grid>
+			</TabItem>
+			
+			<TabItem IsVisible="False">
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="30*"/>
+						<ColumnDefinition Width="250*"/>
+						<ColumnDefinition Width="30*"/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="20*"/>
+						<RowDefinition Height="60*"/>
+						<RowDefinition Height="60*"/>
+						<RowDefinition Height="60*"/>
+						<RowDefinition Height="60*"/>
+						<RowDefinition Height="60*"/>
+						<RowDefinition Height="20*"/>
+					</Grid.RowDefinitions>
+					<StackPanel Grid.Row="1" Grid.Column="1">
+						<Border Margin="5"
+								  CornerRadius="10"
+								  Background="LightBlue">
+							<TextBlock Margin="5"
+							   FontSize="24"
+							   HorizontalAlignment="Center" Foreground="Black"
+							   Text="Company List">
+							</TextBlock>
+						</Border>
+					</StackPanel>
+					<StackPanel Grid.Row="2" Grid.Column="1">
+						<Button Click="BacktoMenuButton_Click">Back to main</Button>
 					</StackPanel>
 				</Grid>
 			</TabItem>
